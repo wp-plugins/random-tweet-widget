@@ -3,8 +3,8 @@ Contributors: whiletrue
 Donate link: http://www.whiletrue.it/
 Tags: random tweet, tweet, random twitter, twitter, twitter sidebar, sidebar, social sidebar, widget, plugin, posts, links, twitter widget, twitter feed, simple twitter
 Requires at least: 2.9+
-Tested up to: 3.5.1
-Stable tag: 1.1
+Tested up to: 3.6.1
+Stable tag: 1.1.1
 
 Shows a random tweet from a Twitter account in a sidebar widget.
 
@@ -54,8 +54,12 @@ div.random_tweet_widget { /* your stuff */ }
 
 == Changelog ==
 
+= 1.1.1 =
+* Changed: Plugin tested up WordPress 3.6.1
+
 = 1.1 =
 * Added: Twitter API 1.1 support
+
 = 1.0.0 =
 Initial release
 

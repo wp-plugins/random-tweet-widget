@@ -4,7 +4,7 @@ Plugin Name: Random Tweet Widget
 Plugin URI: http://www.whiletrue.it/
 Description: This plugin displays a random post from a Twitter account in a sidebar widget.
 Author: WhileTrue
-Version: 1.1
+Version: 1.1.1
 Author URI: http://www.whiletrue.it/
 */
 /*
