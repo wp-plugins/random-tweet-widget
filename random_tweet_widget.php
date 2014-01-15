@@ -4,7 +4,7 @@ Plugin Name: Random Tweet Widget
 Plugin URI: http://www.whiletrue.it/
 Description: This plugin displays a random post from a Twitter account in a sidebar widget.
 Author: WhileTrue
-Version: 1.1.2
+Version: 1.1.3
 Author URI: http://www.whiletrue.it/
 */
 /*
@@ -48,6 +48,7 @@ class RandomTweetWidget extends WP_Widget {
 			array('name'=>'hyperlinks', 'label'=>'Show Hyperlinks', 'type'=>'checkbox'),
 			array('name'=>'twitter_users', 'label'=>'Find @replies', 'type'=>'checkbox'),
 			array('name'=>'encode_utf8', 'label'=>'UTF8 Encode', 'type'=>'checkbox'),
+			array('type'=>'donate'),
 		);
 
         $control_ops = array('width' => 400);
@@ -95,7 +96,6 @@ class RandomTweetWidget extends WP_Widget {
 		
 		foreach ($this->options as $val) {
 			if ($val['type']=='separator') {
-				echo '<hr />';
 				if ($val['label']!='') {
 					echo '<h3>'.$val['label'].'</h3>';
 				}
@@ -111,7 +111,14 @@ class RandomTweetWidget extends WP_Widget {
 				$checked = ($instance[$val['name']]) ? 'checked="checked"' : '';
 				echo '<input id="'.$this->get_field_id($val['name']).'" name="'.$this->get_field_name($val['name']).'" type="checkbox" '.$checked.' />
 						<label for="'.$this->get_field_id($val['name']).'">'.__($val['label']).'</label><br />';
-			}
+			} else if ($val['type']=='donate') {
+        echo '<p style="text-align:center; font-weight:bold;">
+          '.__('Do you like it? I\'m supporting it, please support me!', 'most-and-least-read-posts-widget') .'<br />
+          <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=giu%40formikaio%2eit&item_name=WhileTrue&currency_code=EUR&bn=PP%2dDonationsBF%3abtn_donate_LG%2egif%3aNonHosted" target="_blank">
+         	  <img alt="PayPal - The safer, easier way to pay online!" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" > 
+          </a>
+        </p>';
+      }
 		}
 	}
 
