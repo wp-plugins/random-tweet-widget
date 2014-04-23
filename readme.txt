@@ -3,7 +3,7 @@ Contributors: whiletrue
 Donate link: http://www.whiletrue.it/
 Tags: random tweet, tweet, random twitter, twitter, twitter sidebar, sidebar, social sidebar, widget, plugin, posts, links, twitter widget, twitter feed, simple twitter
 Requires at least: 2.9+
-Tested up to: 3.8
+Tested up to: 3.9
 Stable tag: 1.1.3
 
 Shows a random tweet from a Twitter account in a sidebar widget.
